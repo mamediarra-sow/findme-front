@@ -37,14 +37,14 @@ const UserPersonalForm = ({nextStep, changePrenom, changeNom, changeTelephone,va
                     telephone: values.telephone,
                 }),
             });
-            if(!res.ok){
-                setState({
-                    ...state,
-                    error_fetch:true,
-                    display_error_fetch:"User Already exist"
-                })
-            }
-            else{
+                if(!res.ok){
+                    setState({
+                        ...state,
+                        error_fetch:true,
+                        display_error_fetch:"User Already exist"
+                    })
+                }
+                else{
                 nextStep();
             }
             
@@ -53,11 +53,10 @@ const UserPersonalForm = ({nextStep, changePrenom, changeNom, changeTelephone,va
                 setState({
                     ...state,
                     error_fetch:true,
-                    display_error_fetch:"telephone not valid"
+                    display_error_fetch:"Telephone not valid"
                 })
 
             }
-            nextStep();
                 
         }
     }

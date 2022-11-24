@@ -53,7 +53,6 @@ const ValidationForm = ({nextStep,prevStep,values}) => {
             else{
                 nextStep();
             }
-            nextStep();
         }
     }
 
